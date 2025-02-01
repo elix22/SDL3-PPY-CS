@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>SDL3_CS.Tests.Native.AOT.iOS</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PublishAot>true</PublishAot>
+    <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SDL3-CS.Tests\SDL3-CS.Tests.csproj" PrivateAssets="all"/>
+  </ItemGroup>
+
+
+</Project>

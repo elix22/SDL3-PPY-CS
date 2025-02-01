@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAFA4DBB2D4E197500F5B914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFA4DBA2D4E197500F5B914 /* Assets.xcassets */; };
+		EAFA4DC12D4E197500F5B914 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFA4DC02D4E197500F5B914 /* main.m */; };
+		EAFA4DC92D4E19A500F5B914 /* SDL3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA4DC82D4E19A500F5B914 /* SDL3.xcframework */; };
+		EAFA4DCA2D4E19A500F5B914 /* SDL3.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA4DC82D4E19A500F5B914 /* SDL3.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EAFA4DCD2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA4DCC2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework */; };
+		EAFA4DCE2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAFA4DCC2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EAFA4DCB2D4E19A500F5B914 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EAFA4DCE2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework in Embed Frameworks */,
+				EAFA4DCA2D4E19A500F5B914 /* SDL3.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EAFA4DAB2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xcode-SDL3-iOS-NativeAOT-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFA4DBA2D4E197500F5B914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAFA4DBF2D4E197500F5B914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFA4DC02D4E197500F5B914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAFA4DC82D4E19A500F5B914 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = ../native/ios/SDL3.xcframework; sourceTree = "<group>"; };
+		EAFA4DCC2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SDL3-CS.Tests.Native.AOT.iOS.framework"; path = "../SDL3-CS.Tests.Native.AOT.iOS/SDL3-CS.Tests.Native.AOT.iOS.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAFA4DA82D4E197400F5B914 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA4DCD2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework in Frameworks */,
+				EAFA4DC92D4E19A500F5B914 /* SDL3.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAFA4DA22D4E197400F5B914 = {
+			isa = PBXGroup;
+			children = (
+				EAFA4DAD2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test */,
+				EAFA4DAC2D4E197400F5B914 /* Products */,
+				EAFA4DC72D4E19A500F5B914 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EAFA4DAC2D4E197400F5B914 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA4DAB2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFA4DAD2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA4DBA2D4E197500F5B914 /* Assets.xcassets */,
+				EAFA4DBF2D4E197500F5B914 /* Info.plist */,
+				EAFA4DC02D4E197500F5B914 /* main.m */,
+			);
+			path = "Xcode-SDL3-iOS-NativeAOT-Test";
+			sourceTree = "<group>";
+		};
+		EAFA4DC72D4E19A500F5B914 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAFA4DCC2D4E19C200F5B914 /* SDL3-CS.Tests.Native.AOT.iOS.framework */,
+				EAFA4DC82D4E19A500F5B914 /* SDL3.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAFA4DAA2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFA4DC42D4E197500F5B914 /* Build configuration list for PBXNativeTarget "Xcode-SDL3-iOS-NativeAOT-Test" */;
+			buildPhases = (
+				EAFA4DA72D4E197400F5B914 /* Sources */,
+				EAFA4DA82D4E197400F5B914 /* Frameworks */,
+				EAFA4DA92D4E197400F5B914 /* Resources */,
+				EAFA4DCB2D4E19A500F5B914 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Xcode-SDL3-iOS-NativeAOT-Test";
+			productName = "Xcode-SDL3-iOS-NativeAOT-Test";
+			productReference = EAFA4DAB2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAFA4DA32D4E197400F5B914 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					EAFA4DAA2D4E197400F5B914 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = EAFA4DA62D4E197400F5B914 /* Build configuration list for PBXProject "Xcode-SDL3-iOS-NativeAOT-Test" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAFA4DA22D4E197400F5B914;
+			productRefGroup = EAFA4DAC2D4E197400F5B914 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAFA4DAA2D4E197400F5B914 /* Xcode-SDL3-iOS-NativeAOT-Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAFA4DA92D4E197400F5B914 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA4DBB2D4E197500F5B914 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAFA4DA72D4E197400F5B914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFA4DC12D4E197500F5B914 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EAFA4DC22D4E197500F5B914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EAFA4DC32D4E197500F5B914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAFA4DC52D4E197500F5B914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U627U428U4;
+				FRAMEWORK_SEARCH_PATHS = "../SDL3-CS.Tests.Native.AOT.iOS";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Xcode-SDL3-iOS-NativeAOT-Test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elix22.Xcode-SDL3-iOS-NativeAOT-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAFA4DC62D4E197500F5B914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U627U428U4;
+				FRAMEWORK_SEARCH_PATHS = "../SDL3-CS.Tests.Native.AOT.iOS";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Xcode-SDL3-iOS-NativeAOT-Test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elix22.Xcode-SDL3-iOS-NativeAOT-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAFA4DA62D4E197400F5B914 /* Build configuration list for PBXProject "Xcode-SDL3-iOS-NativeAOT-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFA4DC22D4E197500F5B914 /* Debug */,
+				EAFA4DC32D4E197500F5B914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFA4DC42D4E197500F5B914 /* Build configuration list for PBXNativeTarget "Xcode-SDL3-iOS-NativeAOT-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFA4DC52D4E197500F5B914 /* Debug */,
+				EAFA4DC62D4E197500F5B914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAFA4DA32D4E197400F5B914 /* Project object */;
+}
