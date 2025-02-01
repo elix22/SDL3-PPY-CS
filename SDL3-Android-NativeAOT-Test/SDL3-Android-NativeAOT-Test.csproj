@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>SDL3_Android_NativeAOT_Test</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PublishAot>true</PublishAot>
+    <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
+    <UseLldLinker>false</UseLldLinker> <!-- Add this line -->
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <StripSymbols>true</StripSymbols>
+  </PropertyGroup>
+
+
+  	<PropertyGroup>
+		<!--This is needed in order to build successfully Android binaries-->
+		<IsAndroid>$(RuntimeIdentifier.ToLower().StartsWith('android'))</IsAndroid>
+		<IsAndroid Condition="'$(IsAndroid)'=='false'">$(RuntimeIdentifier.ToLower().StartsWith('linux-bionic'))</IsAndroid>
+		<IsWindowsHost>$([MSBuild]::IsOSPlatform('Windows'))</IsWindowsHost>
+		<IsLinuxHost>$([MSBuild]::IsOSPlatform('Linux'))</IsLinuxHost>
+		<IsOSXHost>$([MSBuild]::IsOSPlatform('OSX'))</IsOSXHost>
+	</PropertyGroup>
+
+  	<!--Following blocks are exclusive for Android building-->
+	<PropertyGroup Condition="$(IsAndroid) == 'true'">
+        <!--Use ndk-sample expected library name -->
+		<CppCompilerAndLinker Condition="$(IsWindowsHost) == 'true'">./android_fake_clang.cmd</CppCompilerAndLinker>
+		<CppCompilerAndLinker Condition="$(IsLinuxHost) == 'true'">./android_fake_clang.sh</CppCompilerAndLinker>
+		<CppCompilerAndLinker Condition="$(IsOSXHost) == 'true'">./android_fake_clang.command</CppCompilerAndLinker>
+		<NdkHost Condition="$(IsWindowsHost) == 'true'">windows-x86_64</NdkHost>
+		<NdkHost Condition="$(IsLinuxHost) == 'true'">linux-x86_64</NdkHost>
+		<NdkHost Condition="$(IsOSXHost) == 'true'">darwin-x86_64</NdkHost>
+		<ObjCopyName Condition="'$(ObjCopyName)' == ''">$(ANDROID_NDK_ROOT)/toolchains/llvm/prebuilt/$(NdkHost)/bin/llvm-objcopy</ObjCopyName>
+		<SysRoot Condition="'$(SysRoot)' == ''">$(ANDROID_NDK_ROOT)/toolchains/llvm/prebuilt/$(NdkHost)/sysroot</SysRoot>
+		<!--Hack for removing init and fini sections into the exports file-->
+		<ExportsPatch>'s/global: _init; _fini;/global: /g;'</ExportsPatch>
+	</PropertyGroup>
+
+  	<Target Name="RemoveSections" Condition="$(IsAndroid) == 'true' And $(RemoveSections) == 'true'" AfterTargets="IlcCompile" BeforeTargets="LinkNative">
+		<!--Reads as lines the generated exports file-->
+		<ReadLinesFromFile File="$(ExportsFile)">
+			<Output TaskParameter="Lines" PropertyName="ExportsLines" />
+		</ReadLinesFromFile>
+		<!--Gets a single text from the exports lines-->
+		<PropertyGroup>
+			<ExportsText Condition="$(ExportsLines) != ''">@(ExportsLines)</ExportsText>
+		</PropertyGroup>
+		<!--The sed tool is used as invalid lines remover-->
+		<Exec Command="sed -i -z $(ExportsPatch) $(ExportsFile)" />
+	</Target>
+
+    <ItemGroup>
+    <!-- https://github.com/exelix11/SysDVR/blob/master/Client/Client.csproj -->
+    <!-- Android needs a proper soname property or it will refuse to load the library -->
+    <LinkerArg Include="-Wl,-soname,SDL3-Android-NativeAOT-Test.so,--undefined-version" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SDL3-CS.Tests\SDL3-CS.Tests.csproj" PrivateAssets="all"/>
+  </ItemGroup>
+
+
+
+</Project>
